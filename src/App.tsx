@@ -12,6 +12,15 @@ export const App = () => {
   const [d, setD] = useState<number>(0);
 
   return (
-    <CubicInput />
+    <CubicInput
+      a={a}
+      b={b}
+      c={c}
+      d={d}
+      setA={setA}
+      setB={setB}
+      setC={setC}
+      setD={setD}
+    />
   );
 };

@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+// import { useState, useRef } from "react";
 
 type InputProps = {
   a: number;
@@ -11,9 +11,78 @@ type InputProps = {
   setD: (value: number) => void;
 }
 
-export const CubicInput = ({a, b, c, d, setA, setB, setC, setD}: InputProps) => {
+export const CubicInput = ({ a, b, c, d, setA, setB, setC, setD }: InputProps) => {
   console.log(a, b, c, d, setA, setB, setC, setD)
 
-  // return (
-  // );
+  return (
+    <div>
+      <h1>Cubic Solver</h1>
+      <form
+        id="cubic-form"
+        onSubmit={(event: React.FormEvent) => {
+          event.preventDefault();
+          if (a === 0) {
+            alert("'a' value cannot be zero!");
+            return;
+          };
+        }}>
+        <div className="input-container">
+          <label htmlFor="a">a-value:</label>
+          <input
+            type="number"
+            id="a"
+            name="a"
+            step="any"
+            required
+            value={a}
+            onChange={(e) => setA(Number(e.target.value))}
+          />
+        </div>
+        <div className="input-container">
+          <label htmlFor="b">b-value:</label>
+          <input
+            type="number"
+            id="b"
+            name="b"
+            step="any"
+            required
+            value={b}
+            onChange={(e) => setB(Number(e.target.value))}
+          />
+        </div>
+        <div className="input-container">
+          <label htmlFor="c">c-value:</label>
+          <input
+            type="number"
+            id="c"
+            name="c"
+            step="any"
+            required
+            value={c}
+            onChange={(e) => setC(Number(e.target.value))}
+          />
+        </div>
+        <div className="input-container">
+          <label htmlFor="d">d-value:</label>
+          <input
+            type="number"
+            id="d"
+            name="d"
+            step="any"
+            required
+            value={d}
+            onChange={(e) => setD(Number(e.target.value))}
+          />
+        </div>
+        <div className="input-container">
+          <input
+            type="submit"
+            id="solve-button"
+            name="solve-button"
+            value="Save"
+          />
+        </div>
+      </form>
+    </div>
+  );
 };
