@@ -1,3 +1,5 @@
+// import { CubicRoots } from '../CubicRoots'
+
 type TableProps = {
   a: number;
   b: number;
@@ -20,29 +22,31 @@ const cardanosMethod = (a: number, b: number, q: number, disciminant: number): n
 };
 
 export const CubicTable = ({ a, b, c, d }: TableProps) => {
-  const p: number = (3 * a * c - b * b) / (3 * a * a);
-  const q: number = (27 * a * a * d - 9 * a * b * c + 2 * b * b * b) / (27 * a * a * a);
-  const discriminant: number = (q / 2) * (q / 2) + (p / 3) * (p / 3) * (p / 3);
+  // const roots = CubicRoots(a, b, c, d);
 
-  let roots: number[] = [];
+    const p: number = (3 * a * c - b * b) / (3 * a * a);
+    const q: number = (27 * a * a * d - 9 * a * b * c + 2 * b * b * b) / (27 * a * a * a);
+    const discriminant: number = (q / 2) * (q / 2) + (p / 3) * (p / 3) * (p / 3);
 
-  if (discriminant < 0) {
-    roots = trignometricMethod(a, b, p, q);
-  } else if (discriminant > 0) {
-    roots = [cardanosMethod(a, b, q, discriminant)];
-  } else {
-    if (p === 0 && q === 0) {
+    let roots: number[] = [];
+
+    if (discriminant < 0) {
+      roots = trignometricMethod(a, b, p, q);
+    } else if (discriminant > 0) {
       roots = [cardanosMethod(a, b, q, discriminant)];
     } else {
-      roots = [
-        cardanosMethod(a, b, q, discriminant),
-        Math.cbrt(q / 2) - b / (3 * a),
-        Math.cbrt(q / 2) - b / (3 * a)
-      ];
+      if (p === 0 && q === 0) {
+        roots = [cardanosMethod(a, b, q, discriminant)];
+      } else {
+        roots = [
+          cardanosMethod(a, b, q, discriminant),
+          Math.cbrt(q / 2) - b / (3 * a),
+          Math.cbrt(q / 2) - b / (3 * a)
+        ];
+      };
     };
-  };
 
-  roots.sort((a, b) => a - b);
+    roots.sort((a, b) => a - b);
 
   return (
     <table id="results-table">
