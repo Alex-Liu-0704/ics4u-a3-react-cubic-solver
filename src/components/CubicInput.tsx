@@ -9,7 +9,7 @@ type InputProps = {
   setB: (value: number) => void;
   setC: (value: number) => void;
   setD: (value: number) => void;
-}
+};
 
 export const CubicInput = ({ a, b, c, d, setA, setB, setC, setD }: InputProps) => {
   console.log(a, b, c, d, setA, setB, setC, setD)
@@ -21,7 +21,7 @@ export const CubicInput = ({ a, b, c, d, setA, setB, setC, setD }: InputProps) =
         id="cubic-form"
         onSubmit={(event: React.SubmitEvent<HTMLFormElement>) => {
           event.preventDefault();
-          
+
           if (a === 0) {
             alert("'a' value cannot be zero!");
             return;

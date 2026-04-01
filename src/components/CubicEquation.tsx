@@ -3,7 +3,7 @@ type EquationProps = {
   b: number;
   c: number;
   d: number;
-}
+};
 
 export const CubicEquation = ({ a, b, c, d }: EquationProps) => {
   return (

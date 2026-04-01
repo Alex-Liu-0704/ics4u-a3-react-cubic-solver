@@ -3,7 +3,7 @@ import { CubicInput } from './components/CubicInput';
 import { CubicEquation } from './components/CubicEquation';
 import { CubicTable } from './components/CubicTable';
 import { CubicGraph } from './components/CubicGraph';
-// import { CubicHistory } from './components/CubicHistory';
+import { CubicHistory } from './components/CubicHistory';
 import { CubicSolver } from './CubicSolver';
 
 export const App = () => {
@@ -47,6 +47,12 @@ export const App = () => {
         c={c}
         d={d}
         roots={roots}
+      />
+      <CubicHistory
+        a={a}
+        b={b}
+        c={c}
+        d={d}
       />
     </div>
   );

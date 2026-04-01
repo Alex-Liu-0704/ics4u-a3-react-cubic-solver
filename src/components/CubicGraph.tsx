@@ -6,7 +6,7 @@ type GraphProps = {
   c: number;
   d: number;
   roots: number[];
-}
+};
 
 export const CubicGraph = ({ a, b, c, d, roots }: GraphProps) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
