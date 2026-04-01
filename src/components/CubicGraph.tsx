@@ -5,9 +5,10 @@ type GraphProps = {
   b: number;
   c: number;
   d: number;
+  roots: number[];
 }
 
-export const CubicGraph = ({ a, b, c, d }: GraphProps) => {
+export const CubicGraph = ({ a, b, c, d, roots }: GraphProps) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   useEffect(() => {
@@ -76,18 +77,18 @@ export const CubicGraph = ({ a, b, c, d }: GraphProps) => {
 
     ctx.stroke();
 
-    // // plot roots
-    // ctx.fillStyle = "#8C93A8";
+    // plot roots
+    ctx.fillStyle = "#8C93A8";
 
-    // for (let i: number = 0; i < roots.length; i++) {
-    //     const root: number = roots[i];
-    //     const x: number = xCenter + root * scale;
-    //     const y: number = yCenter;
+    for (let i: number = 0; i < roots.length; i++) {
+        const root: number = roots[i];
+        const x: number = xCenter + root * scale;
+        const y: number = yCenter;
 
-    //     ctx.beginPath();
-    //     ctx.arc(x, y, 4, 0, 2 * Math.PI);
-    //     ctx.fill();
-    // };
+        ctx.beginPath();
+        ctx.arc(x, y, 4, 0, 2 * Math.PI);
+        ctx.fill();
+    };
   }, [a, b, c, d]);
 
   return (
