@@ -18,7 +18,7 @@ export const App = () => {
   const q: number = (27 * a * a * d - 9 * a * b * c + 2 * b * b * b) / (27 * a * a * a);
   const discriminant: number = (q / 2) * (q / 2) + (p / 3) * (p / 3) * (p / 3);
   const roots: number[] = CubicSolver(a, b, p, q, discriminant);
-  const maxMinCoords = LocalMaxMin(a, b, c, d);
+  const maxMinCoords = LocalMaxMin(a, b, c);
 
   return (
     <div>
@@ -44,6 +44,7 @@ export const App = () => {
         q={q}
         discriminant={discriminant}
         roots={roots}
+        maxMinCoords={maxMinCoords}
       />
       <CubicGraph
         a={a}

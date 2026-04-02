@@ -3,6 +3,7 @@ type TableProps = {
   q: number;
   discriminant: number;
   roots: number[];
+  maxMinCoords: any[];
 };
 
 export const CubicTable = ({ p, q, discriminant, roots }: TableProps) => {
