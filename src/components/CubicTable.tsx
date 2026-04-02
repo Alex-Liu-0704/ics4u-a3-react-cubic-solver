@@ -3,10 +3,10 @@ type TableProps = {
   q: number;
   discriminant: number;
   roots: number[];
-  maxMinCoords: any[];
+  turningPoints: { x: number; y: number; type: string }[];
 };
 
-export const CubicTable = ({ p, q, discriminant, roots }: TableProps) => {
+export const CubicTable = ({ p, q, discriminant, roots, turningPoints }: TableProps) => {
   return (
     <table id="results-table">
       <tr>
@@ -59,6 +59,22 @@ export const CubicTable = ({ p, q, discriminant, roots }: TableProps) => {
         </td>
         <td>0</td>
       </tr>
+      <tr>
+        <th>Turning Point</th>
+        <th>x</th>
+        <th>y</th>
+      </tr>
+      {turningPoints.length > 0 ? turningPoints.map((point, i) => (
+        <tr key={i}>
+          <td>{point.type}</td>
+          <td>{point.x.toFixed(2)}</td>
+          <td>{point.y.toFixed(2)}</td>
+        </tr>
+      )) : (
+        <tr>
+          <td colSpan={3}>No turning points</td>
+        </tr>
+      )};
     </table>
-  )
+  );
 };

@@ -14,7 +14,7 @@ export const CubicEquation = ({ a, b, c, d }: EquationProps) => {
         `${c === 0 ? "" : c === 1 ? ` + x` : c === -1 ? ` - x` : c > 0 ? ` + ${c}x` : ` - ${Math.abs(c)}x`}` +
         `${d === 0 ? "" : d > 0 ? ` + ${d}` : ` - ${Math.abs(d)}`}` +
         ` = 0`
-      };
+      }
     </h2>
   );
 };
