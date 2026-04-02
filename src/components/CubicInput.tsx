@@ -1,5 +1,3 @@
-// import { useState, useRef } from "react";
-
 type InputProps = {
   a: number;
   b: number;
@@ -9,11 +7,10 @@ type InputProps = {
   setB: (value: number) => void;
   setC: (value: number) => void;
   setD: (value: number) => void;
+  onSave: () => void;
 };
 
-export const CubicInput = ({ a, b, c, d, setA, setB, setC, setD }: InputProps) => {
-  console.log(a, b, c, d, setA, setB, setC, setD)
-
+export const CubicInput = ({ a, b, c, d, setA, setB, setC, setD, onSave }: InputProps) => {
   return (
     <div>
       <h1>Cubic Solver</h1>
@@ -26,6 +23,8 @@ export const CubicInput = ({ a, b, c, d, setA, setB, setC, setD }: InputProps) =
             alert("'a' value cannot be zero!");
             return;
           };
+
+          onSave();
         }}>
         <div className="input-container">
           <label htmlFor="a">a-value:</label>

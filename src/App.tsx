@@ -11,6 +11,7 @@ export const App = () => {
   const [b, setB] = useState<number>(0);
   const [c, setC] = useState<number>(0);
   const [d, setD] = useState<number>(0);
+  const [history, setHistory] = useState<{ a: number; b: number; c: number; d: number }[]>([]);
 
   const p: number = (3 * a * c - b * b) / (3 * a * a);
   const q: number = (27 * a * a * d - 9 * a * b * c + 2 * b * b * b) / (27 * a * a * a);
@@ -28,6 +29,7 @@ export const App = () => {
         setB={setB}
         setC={setC}
         setD={setD}
+        onSave={() => setHistory([...history, { a, b, c, d }])}
       />
       <CubicEquation
         a={a}
@@ -49,10 +51,11 @@ export const App = () => {
         roots={roots}
       />
       <CubicHistory
-        a={a}
-        b={b}
-        c={c}
-        d={d}
+        history={history}
+        setA={setA}
+        setB={setB}
+        setC={setC}
+        setD={setD}
       />
     </div>
   );
