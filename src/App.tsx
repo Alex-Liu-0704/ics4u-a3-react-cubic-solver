@@ -5,6 +5,7 @@ import { CubicTable } from './components/CubicTable';
 import { CubicGraph } from './components/CubicGraph';
 import { CubicHistory } from './components/CubicHistory';
 import { CubicSolver } from './CubicSolver';
+import { LocalMaxMin } from './LocalMaxMin';
 
 export const App = () => {
   const [a, setA] = useState<number>(1);
@@ -17,6 +18,7 @@ export const App = () => {
   const q: number = (27 * a * a * d - 9 * a * b * c + 2 * b * b * b) / (27 * a * a * a);
   const discriminant: number = (q / 2) * (q / 2) + (p / 3) * (p / 3) * (p / 3);
   const roots: number[] = CubicSolver(a, b, p, q, discriminant);
+  const maxMinCoords = LocalMaxMin(a, b, c, d);
 
   return (
     <div>
