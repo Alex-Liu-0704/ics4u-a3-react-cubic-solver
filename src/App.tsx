@@ -4,8 +4,8 @@ import { CubicEquation } from './components/CubicEquation';
 import { CubicTable } from './components/CubicTable';
 import { CubicGraph } from './components/CubicGraph';
 import { CubicHistory } from './components/CubicHistory';
-import { CubicSolver } from './CubicSolver';
-import { LocalMaxMin } from './LocalMaxMin';
+import { CubicSolver } from './utils/CubicSolver';
+import { LocalMaxMin } from './utils/LocalMaxMin';
 
 export const App = () => {
   const [a, setA] = useState<number>(1);
