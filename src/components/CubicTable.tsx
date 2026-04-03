@@ -60,7 +60,10 @@ export const CubicTable = ({ p, q, discriminant, roots, turningPoints }: TablePr
         <td>0.00</td>
       </tr>
       <tr>
-        <th>Turning Point</th>
+        <th>Turning Points</th>
+      </tr>
+      <tr>
+        <th>Type</th>
         <th>x</th>
         <th>y</th>
       </tr>
@@ -74,7 +77,7 @@ export const CubicTable = ({ p, q, discriminant, roots, turningPoints }: TablePr
         <tr>
           <td colSpan={3}>No turning points</td>
         </tr>
-      )};
+      )}
     </table>
   );
 };

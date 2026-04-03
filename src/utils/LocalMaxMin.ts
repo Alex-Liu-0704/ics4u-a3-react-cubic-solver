@@ -26,8 +26,8 @@ export const LocalMaxMin = (a: number, b: number, c: number, d: number): { x: nu
         coordinates.push({ x, y: y(x), type: "Min" });
       } else if (secondDerivative(x) < 0) {
         coordinates.push({ x, y: y(x), type: "Max" });
-      } else {
-        coordinates.push({ x, y: y(x), type: "None" });
+    //   } else {
+    //     coordinates.push({ x, y: y(x), type: "None" });
       };
     };
 
