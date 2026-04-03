@@ -13,7 +13,7 @@ type InputProps = {
 export const CubicInput = ({ a, b, c, d, setA, setB, setC, setD, onSave }: InputProps) => {
   return (
     <div className="font-sans text-base">
-      <h1 className="text-[32px] font-bold flex justify-center pt-2 pb-2 mb-10 bg-[#2a2a2a] text-gray-300 hover:text-white w-screen">
+      <h1 className="text-[32px] font-bold flex justify-center pt-2 pb-2 mb-10 bg-[#2a2a2a] text-gray-300 hover:text-white w-full">
         Cubic Solver
       </h1>
       <form
