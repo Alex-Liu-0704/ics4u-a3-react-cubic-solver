@@ -16,7 +16,7 @@ export const App = () => {
 
   const p: number = (3 * a * c - b * b) / (3 * a * a);
   const q: number = (27 * a * a * d - 9 * a * b * c + 2 * b * b * b) / (27 * a * a * a);
-  const discriminant: number = (q / 2) * (q / 2) + (p / 3) * (p / 3) * (p / 3);
+  const discriminant: number = Number(((q / 2) * (q / 2) + (p / 3) * (p / 3) * (p / 3)).toFixed(6));
   const roots: number[] = CubicSolver(a, b, p, q, discriminant);
   const turningPoints = LocalMaxMin(a, b, c, d);
 
