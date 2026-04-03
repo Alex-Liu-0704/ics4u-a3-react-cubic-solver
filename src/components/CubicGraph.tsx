@@ -81,17 +81,19 @@ export const CubicGraph = ({ a, b, c, d, roots }: GraphProps) => {
     ctx.fillStyle = "#8C93A8";
 
     for (let i: number = 0; i < roots.length; i++) {
-        const root: number = roots[i];
-        const x: number = xCenter + root * scale;
-        const y: number = yCenter;
+      const root: number = roots[i];
+      const x: number = xCenter + root * scale;
+      const y: number = yCenter;
 
-        ctx.beginPath();
-        ctx.arc(x, y, 4, 0, 2 * Math.PI);
-        ctx.fill();
+      ctx.beginPath();
+      ctx.arc(x, y, 4, 0, 2 * Math.PI);
+      ctx.fill();
     };
   }, [a, b, c, d]);
 
   return (
-    <canvas ref={canvasRef} width={600} height={600}></canvas> // idk what this part really means
+    <div className="border border-[#e2e2e2] p-[10px] bg-white">
+      <canvas ref={canvasRef} width={600} height={600}></canvas>
+    </div>
   );
 };

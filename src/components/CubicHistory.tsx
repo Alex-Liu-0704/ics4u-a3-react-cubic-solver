@@ -32,6 +32,6 @@ export const CubicHistory = ({ history, setA, setB, setC, setD }: HistoryProps) 
           </tr>
         ))}
       </tr>
-    </table >
+    </table>
   )
 };

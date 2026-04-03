@@ -39,27 +39,29 @@ export const App = () => {
         c={c}
         d={d}
       />
-      <CubicTable
-        p={p}
-        q={q}
-        discriminant={discriminant}
-        roots={roots}
-        turningPoints={turningPoints}
-      />
-      <CubicGraph
-        a={a}
-        b={b}
-        c={c}
-        d={d}
-        roots={roots}
-      />
-      <CubicHistory
-        history={history}
-        setA={setA}
-        setB={setB}
-        setC={setC}
-        setD={setD}
-      />
+      <div className="flex justify-center items-start gap-[40px] mt-[30px]">
+        <CubicTable
+          p={p}
+          q={q}
+          discriminant={discriminant}
+          roots={roots}
+          turningPoints={turningPoints}
+        />
+        <CubicGraph
+          a={a}
+          b={b}
+          c={c}
+          d={d}
+          roots={roots}
+        />
+        <CubicHistory
+          history={history}
+          setA={setA}
+          setB={setB}
+          setC={setC}
+          setD={setD}
+        />
+      </div>
     </div>
   );
 };
