@@ -7,7 +7,7 @@ type EquationProps = {
 
 export const CubicEquation = ({ a, b, c, d }: EquationProps) => {
   return (
-    <h2>
+    <h2 className="text-center my-[40px] w-full font-medium text-[24px]">
       {
         `${a === 1 ? "" : a}x³` +
         `${b === 0 ? "" : b === 1 ? ` + x²` : b === -1 ? ` - x²` : b > 0 ? ` + ${b}x²` : ` - ${Math.abs(b)}x²`}` +

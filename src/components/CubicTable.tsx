@@ -37,7 +37,7 @@ export const CubicTable = ({ p, q, discriminant, roots, turningPoints }: TablePr
         <td>
           {Math.abs(roots[0]) < 0.005 ? "0.00" : roots[0].toFixed(2)}
         </td>
-        <td>0</td>
+        <td>0.00</td>
       </tr>
       <tr>
         <td>Root 2</td>
@@ -47,7 +47,7 @@ export const CubicTable = ({ p, q, discriminant, roots, turningPoints }: TablePr
             : discriminant > 0 ? "complex"
               : (Math.abs(roots[0]) < 0.005 ? "0.00" : roots[0].toFixed(2))}
         </td>
-        <td>0</td>
+        <td>0.00</td>
       </tr>
       <tr>
         <td>Root 3</td>
@@ -57,7 +57,7 @@ export const CubicTable = ({ p, q, discriminant, roots, turningPoints }: TablePr
             : discriminant > 0 ? "complex"
               : (Math.abs(roots[0]) < 0.005 ? "0.00" : roots[0].toFixed(2))}
         </td>
-        <td>0</td>
+        <td>0.00</td>
       </tr>
       <tr>
         <th>Turning Point</th>
