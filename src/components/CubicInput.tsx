@@ -23,7 +23,7 @@ export const CubicInput = ({ a, b, c, d, setA, setB, setC, setD, onSave }: Input
           event.preventDefault();
 
           if (a === 0) {
-            alert("'a' value cannot be zero!");
+            alert("Please input a coefficient 'a' value.");
             return;
           };
 

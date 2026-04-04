@@ -40,20 +40,30 @@ export const App = () => {
         d={d}
       />
       <div className="flex justify-center items-start gap-[40px] mt-[30px]">
-        <CubicTable
-          p={p}
-          q={q}
-          discriminant={discriminant}
-          roots={roots}
-          turningPoints={turningPoints}
-        />
-        <CubicGraph
-          a={a}
-          b={b}
-          c={c}
-          d={d}
-          roots={roots}
-        />
+        {a === 0 ? (
+          <div>
+            <p className="text-[20px] text-center mt-[30px] mx-[300px] font-medium text-red-500">
+              Coefficient 'a' cannot be zero.
+            </p>
+          </div>
+        ) : (
+          <div className="flex gap-[40px] items-start">
+            <CubicTable
+              p={p}
+              q={q}
+              discriminant={discriminant}
+              roots={roots}
+              turningPoints={turningPoints}
+            />
+            <CubicGraph
+              a={a}
+              b={b}
+              c={c}
+              d={d}
+              roots={roots}
+            />
+          </div>
+        )}
         <CubicHistory
           history={history}
           setA={setA}
