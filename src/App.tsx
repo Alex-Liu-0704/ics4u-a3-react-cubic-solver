@@ -40,14 +40,14 @@ export const App = () => {
         d={d}
       />
       <div className="flex justify-center items-start gap-[40px] mt-[30px]">
-        {a === 0 ? (
-          <div>
-            <p className="text-[20px] text-center mt-[30px] mx-[300px] font-medium text-red-500">
-              Coefficient 'a' cannot be zero.
-            </p>
-          </div>
-        ) : (
-          <div className="flex gap-[40px] items-start">
+        <div className="flex flex-col gap-[20px]">
+          {a === 0 ? (
+            <div>
+              <p className="text-[20px] text-center my-[30px] font-medium text-red-500">
+                Coefficient 'a' cannot be zero.
+              </p>
+            </div>
+          ) : (
             <CubicTable
               p={p}
               q={q}
@@ -55,22 +55,24 @@ export const App = () => {
               roots={roots}
               turningPoints={turningPoints}
             />
-            <CubicGraph
-              a={a}
-              b={b}
-              c={c}
-              d={d}
-              roots={roots}
-            />
-          </div>
+          )}
+          <CubicHistory
+            history={history}
+            setA={setA}
+            setB={setB}
+            setC={setC}
+            setD={setD}
+          />
+        </div>
+        {a !== 0 && (
+          <CubicGraph
+            a={a}
+            b={b}
+            c={c}
+            d={d}
+            roots={roots}
+          />
         )}
-        <CubicHistory
-          history={history}
-          setA={setA}
-          setB={setB}
-          setC={setC}
-          setD={setD}
-        />
       </div>
     </div>
   );

@@ -8,7 +8,7 @@ type HistoryProps = {
 
 export const CubicHistory = ({ history, setA, setB, setC, setD }: HistoryProps) => {
   return (
-    <table>
+    <table className="mb-[50px]">
       <thead>
         <tr>
           <th colSpan={4} className="pl-0 pt-0 px-[14px] py-[8px] text-left font-medium">History</th>
