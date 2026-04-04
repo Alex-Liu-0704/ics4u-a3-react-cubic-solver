@@ -33,12 +33,14 @@ export const App = () => {
         setD={setD}
         onSave={() => setHistory([...history, { a, b, c, d }])}
       />
+      {a !== 0 && (
       <CubicEquation
         a={a}
         b={b}
         c={c}
         d={d}
       />
+      )}
       <div className="flex justify-center items-start gap-[40px] mt-[30px]">
         <div className="flex flex-col gap-[20px]">
           {a === 0 ? (
