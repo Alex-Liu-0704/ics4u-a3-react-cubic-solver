@@ -5,7 +5,7 @@ import { CubicTable } from './components/CubicTable';
 import { CubicGraph } from './components/CubicGraph';
 import { CubicHistory } from './components/CubicHistory';
 import { CubicSolver } from './utils/CubicSolver';
-import { LocalMaxMin } from './utils/LocalMaxMin';
+import { LocalMaxMin } from './utils/LocalMinMax';
 
 export const App = () => {
   const [a, setA] = useState<number>(1);
